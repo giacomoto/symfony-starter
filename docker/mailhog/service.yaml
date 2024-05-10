@@ -1,0 +1,17 @@
+services:
+
+    mailhog:
+        container_name: ${PROJECT_NAME}.mailhog
+        image: mailhog/mailhog
+        logging:
+            driver: 'none'
+        restart: always
+        ports:
+            - ${MAILHOG_WEB_PORT}
+            - ${MAILHOG_SMTP_PORT}
+        networks:
+            - api_network
+
+networks:
+    api_network:
+        name: ${NETWORK_NAME}

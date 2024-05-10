@@ -1,0 +1,23 @@
+services:
+
+    mariadb-10-5:
+        container_name: ${PROJECT_NAME}.mariadb-10-5
+        image: mariadb:10.5
+        restart: always
+        volumes:
+            - ../mariadb-10-5/backups:/backups:rw
+            - ../mariadb-10-5/data:/var/lib/mysql:rw
+        tty: true
+        environment:
+            MARIADB_USER: ${MARIADB_USER}
+            MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+            MARIADB_DATABASE: ${MARIADB_DATABASE}
+            MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+        ports:
+            - ${MARIADB_PORT}
+        networks:
+            - api_network
+
+networks:
+    api_network:
+        name: ${NETWORK_NAME}

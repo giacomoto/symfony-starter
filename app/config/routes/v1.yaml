@@ -1,0 +1,9 @@
+api_v1_auth_:
+    resource: v1/auth.yaml
+    prefix: /api/v1/auth
+    name_prefix: 'api_v1_auth_'
+
+api_v1_test_:
+    resource: v1/test.yaml
+    prefix: /api/v1
+    name_prefix: 'api_v1_test_'
