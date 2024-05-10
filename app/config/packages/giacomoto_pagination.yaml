@@ -1,0 +1,3 @@
+giacomoto_pagination:
+    default_size: '%env(int:GIACOMOTO_PAGINATION_DEFAULT_SIZE)%'
+    allowed_sizes: '%env(resolve:GIACOMOTO_PAGINATION_ALLOWED_SIZES)%'

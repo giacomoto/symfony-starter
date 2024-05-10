@@ -1,0 +1,4 @@
+test:
+    path: /test
+    methods: get
+    controller: App\Controller\V1\TestController::test

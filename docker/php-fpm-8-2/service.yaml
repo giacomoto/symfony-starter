@@ -1,0 +1,29 @@
+services:
+
+    php-fpm-8-2:
+        container_name: ${PROJECT_NAME}.php-fpm-8-2
+        build:
+            context: ../../
+            dockerfile: docker/php-fpm-8-2/Dockerfile
+            args:
+                USER: ${USER}
+                XDEBUG_PORT: ${XDEBUG_PORT}
+        volumes:
+            - /etc/timezone:/etc/timezone:ro
+            - /etc/localtime:/etc/localtime:ro
+            - ../php-fpm-8-2/log/:/var/log/php82:rw
+            - ../../app:${WORKDIR}:rw
+            - ../php-fpm-8-2/php.ini:/etc/php82/conf.d/php.ini:ro
+        working_dir: ${WORKDIR}
+        tty: true
+        user: ${USER}
+        expose:
+            - ${PHP_FPM_EXPOSE}
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        networks:
+            - api_network
+
+networks:
+    api_network:
+        name: ${NETWORK_NAME}

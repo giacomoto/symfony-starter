@@ -1,0 +1,15 @@
+register:
+    path: register
+    methods: post
+    controller: App\Controller\V1\AuthController::register
+
+login:
+    path: login
+
+refresh_token:
+    path: refresh
+
+me:
+    path: me
+    methods: get
+    controller: App\Controller\V1\AuthController::getMe

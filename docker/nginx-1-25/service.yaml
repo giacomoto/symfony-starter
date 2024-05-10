@@ -1,0 +1,21 @@
+services:
+
+    nginx-1-25:
+        container_name: ${PROJECT_NAME}.nginx-1-25
+        image: nginx:1.25-alpine
+        restart: always
+        volumes:
+            - ../nginx-1-25/conf.d:/etc/nginx/conf.d:ro
+            - ../nginx-1-25/log:/var/log/nginx:rw
+            - ../nginx-1-25/ssl:/etc/nginx/ssl:ro
+            - ../../app:${WORKDIR}:rw
+        ports:
+            - ${NGINX_PORT_80}
+            - ${NGINX_PORT_443}
+        tty: true
+        networks:
+            - api_network
+
+networks:
+    api_network:
+        name: ${NETWORK_NAME}
