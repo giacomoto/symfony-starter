@@ -159,8 +159,13 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/var-exporter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/giacomoto/symfony-dto" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfonycasts/reset-password-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/twig/extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/twig/twig" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

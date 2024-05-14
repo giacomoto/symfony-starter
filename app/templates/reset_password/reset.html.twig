@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add New Password{% endblock %}
+
+{% block body %}
+    <div class="w-100 d-flex justify-content-center align-items-center vh-100">
+        <div class="card text-center bg-light-subtle" style="width: 600px;">
+            <div class="card-header h5 text-white bg-primary">Add New Password</div>
+            <div class="card-body px-5">
+                <p class="card-text py-2">
+                    Enter a new password.
+                </p>
+                <div class="form-floating form-outline my-3">
+                    <input type="password" id="password" name="password" required class="form-control" placeholder="Password"/>
+                    <label for="password">New Password</label>
+                </div>
+                <div class="form-floating form-outline my-3">
+                    <input type="password" id="passwordRetype" name="passwordRetype" required class="form-control" placeholder="Retype Password"/>
+                    <label for="passwordRetype">Retype New Password</label>
+                </div>
+                <div id="error" class="alert alert-danger" style="display:none;">Error</div>
+                <button class="btn btn-primary w-100" onclick="changePassword()">Change password</button>
+                <div class="d-flex justify-content-between mt-4">
+                    {#                <a class="" href="#">Login</a> #}
+                    {#                <a class="" href="#">Register</a> #}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+{{ parent() }}
+
+<script>
+    function getTokenFromQueryParams() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('token');
+    }
+
+    function changePassword() {
+        const password = document.getElementById('password').value;
+        const passwordRetype = document.getElementById('passwordRetype').value;
+        const errorDiv = document.getElementById('error');
+
+        if (password !== passwordRetype) {
+            errorDiv.innerHTML = 'Passwords do not match!';
+            errorDiv.style.display = 'block';
+            return;
+        }
+
+        const xhr = new XMLHttpRequest();
+        const url = "{{ path('api_v1_reset_password_change') }}";
+        const formData = JSON.stringify({
+            password: password,
+            token: getTokenFromQueryParams()
+        });
+
+        errorDiv.innerHTML = '';
+        errorDiv.style.display = 'none';
+
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status < 400) {
+                    window.location.href = "{{ path('web_reset_password_success') }}";
+                } else {
+                    errorDiv.innerHTML = 'An error occurred! Please try again.';
+                    errorDiv.style.display = 'block';
+                }
+            }
+        };
+
+        xhr.send(formData);
+    }
+</script>
+{% endblock %}

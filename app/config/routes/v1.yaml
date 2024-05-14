@@ -3,7 +3,7 @@ api_v1_auth_:
     prefix: /api/v1/auth
     name_prefix: 'api_v1_auth_'
 
-api_v1_test_:
-    resource: v1/test.yaml
+api_v1_reset_password_:
+    resource: v1/reset-password.yaml
     prefix: /api/v1
-    name_prefix: 'api_v1_test_'
+    name_prefix: 'api_v1_reset_password_'

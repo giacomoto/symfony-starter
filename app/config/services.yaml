@@ -20,6 +20,7 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    ##### EVENT LISTENERS #####
     app.event.authentication_success_listener:
         class: App\EventListener\AuthenticationSuccessListener
         tags:
@@ -33,6 +34,11 @@ services:
     App\EventListener\ErrorResponseExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }
+
+    App\EventListener\NoReplyEmailListener:
+        tags:
+            - { name: kernel.event_subscriber, event: reset_password.request }
+            - { name: kernel.event_subscriber, event: reset_password.success }
 
     ##### SERVICES #####
     App\Mail\Service\NoReplyMailService:

@@ -163,13 +163,11 @@
       <path value="$PROJECT_DIR$/app/vendor/jms/serializer-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/jms/serializer" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/app/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfonycasts/reset-password-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/app/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/twig/twig" />

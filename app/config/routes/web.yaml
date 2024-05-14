@@ -1,0 +1,4 @@
+web_:
+    resource: web/reset-password.yaml
+    prefix: /
+    name_prefix: 'web_reset_password_'

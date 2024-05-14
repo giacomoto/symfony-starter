@@ -11,6 +11,7 @@ return [
     Giacomoto\Bundle\GiacomotoValidationBundle\GiacomotoValidationBundle::class => ['all' => true],
     Giacomoto\Bundle\GiacomotoPaginationBundle\GiacomotoPaginationBundle::class => ['all' => true],
     Giacomoto\Bundle\GiacomotoDtoBundle\GiacomotoDtoBundle::class => ['all' => true],
+    SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle::class => ['all' => true],
     Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
 ];
