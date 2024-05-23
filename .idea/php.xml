@@ -173,6 +173,35 @@
       <path value="$PROJECT_DIR$/app/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/app/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/app/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/app/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/app/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/app/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/app/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/app/vendor/grpc/grpc" />
+      <path value="$PROJECT_DIR$/app/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/app/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/app/vendor/beste/clock" />
+      <path value="$PROJECT_DIR$/app/vendor/beste/in-memory-cache" />
+      <path value="$PROJECT_DIR$/app/vendor/beste/json" />
+      <path value="$PROJECT_DIR$/app/vendor/kreait/firebase-tokens" />
+      <path value="$PROJECT_DIR$/app/vendor/kreait/firebase-php" />
+      <path value="$PROJECT_DIR$/app/vendor/rize/uri-template" />
+      <path value="$PROJECT_DIR$/app/vendor/google/cloud-storage" />
+      <path value="$PROJECT_DIR$/app/vendor/google/gax" />
+      <path value="$PROJECT_DIR$/app/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/app/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/app/vendor/google/longrunning" />
+      <path value="$PROJECT_DIR$/app/vendor/google/protobuf" />
+      <path value="$PROJECT_DIR$/app/vendor/google/grpc-gcp" />
+      <path value="$PROJECT_DIR$/app/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/app/vendor/google/cloud-core" />
+      <path value="$PROJECT_DIR$/app/vendor/google/common-protos" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

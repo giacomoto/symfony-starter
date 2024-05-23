@@ -40,4 +40,13 @@ services:
             $emailName: '%env(resolve:NO_REPLY_EMAIL_NAME)%'
             $emailAddress: '%env(resolve:NO_REPLY_EMAIL_ADDRESS)%'
 
+    App\Notification\Provider\FirebaseNotificationProvider:
+        arguments:
+            $credentialsPath: '%kernel.project_dir%/config/firebase_credentials.json'
+
+    App\Notification\Service\NotificationService:
+        arguments:
+            $providers:
+                - '@App\Notification\Provider\FirebaseNotificationProvider'
+
     ##### CRUD #####
